@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | LIC Agent S. Sundari</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">LIC <span>Insurance</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" id="nav-home">Home</a></li>
+            <li><a href="about.html" id="nav-about">About</a></li>
+            <li><a href="policy.html" id="nav-policy">Policy</a></li>
+            <li><a href="contact.html" class="active" id="nav-contact">Contact</a></li>
+            <li>
+                <select id="lang-selector" onchange="changeLanguage()">
+                    <option value="en">English</option>
+                    <option value="ta">தமிழ்</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="contact-wrapper">
+        <div class="contact-container-modern">
+            <div class="info-side">
+                <h1 id="contact-title">Connect with Us</h1>
+                <p id="contact-subtitle">Secure your family's future today with expert guidance.</p>
+                
+                <div class="contact-list">
+                    <div class="contact-box">
+                        <span class="icon">📞</span>
+                        <div>
+                            <h4 id="label-phone">Call Now</h4>
+                            <a href="tel:+919865822106">+91 98658 22106</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-box">
+                        <span class="icon">✉️</span>
+                        <div>
+                            <h4 id="label-email">Email Us</h4>
+                            <a href="mailto:sanjaysuresh1427@gmail.com">sanjaysuresh1427@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-box">
+                        <span class="icon">📍</span>
+                        <div>
+                            <h4 id="label-loc">Office</h4>
+                            <p>Tindivanam, Tamil Nadu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-side">
+                <h2 id="action-heading">Quick Inquiry</h2>
+                <p id="action-desc">Click below to start a conversation on WhatsApp for instant support.</p>
+                <a href="https://wa.me/919865822106" class="whatsapp-card-btn">
+                    <span id="whatsapp-btn">Message on WhatsApp</span>
+                </a>
+                <div class="timing-note">
+                    <p id="timing">Available: Mon - Sat (9 AM - 8 PM)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p id="footer-contact">© 2026 LIC Agent – S. Sundari, Tindivanam</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

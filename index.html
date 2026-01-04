@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIC | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LIC <span>Insurance</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" id="nav-home">Home</a></li>
+            <li><a href="about.html" id="nav-about">About</a></li>
+            <li><a href="policy.html" id="nav-policy">Policy</a></li>
+            <li><a href="contact.html" id="nav-contact">Contact</a></li>
+            <li>
+                <select id="lang-selector" onchange="changeLanguage()">
+                    <option value="en">English</option>
+                    <option value="ta">தமிழ்</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="home-hero">
+        <div class="hero-content">
+            <h1 class="slogan" id="hero-title">Trust. Security. Prosperity.</h1>
+            <p class="sub-slogan" id="hero-desc">LIC of India: Ensuring a brighter, safer future for you and your loved ones.</p>
+     <button class="stylish-yellow-btn" id="explore-btn" onclick="goToPolicies()">
+    Explore Our Policies
+</button>
+        </div>
+    </header>
+
+    <section class="home-benefits">
+        <h2 class="section-title" id="benefits-title">Benefits of LIC</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3 id="b1-title">Sovereign Guarantee</h3>
+                <p id="b1-desc">The Government of India guarantees the sum assured and bonuses.</p>
+            </div>
+            <div class="benefit-card card-secure">
+                <h3 id="b2-title">High Security</h3>
+                <p id="b2-desc">A consistent claim settlement ratio of over 98% for your peace of mind.</p>
+            </div>
+            <div class="benefit-card card-prosperity">
+                <h3 id="b3-title">Wealth Prosperity</h3>
+                <p id="b3-desc">Enjoy dual benefits of long-term wealth creation and significant tax savings.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

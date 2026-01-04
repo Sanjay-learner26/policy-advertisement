@@ -1,0 +1,751 @@
+:root {
+    --lic-blue: #00529b;
+    --lic-yellow: #ffcb05;
+    --white: #ffffff;
+    --gray-bg: #f0f2f5;
+    --security-gold: #d4af37;
+    --prosperity-navy: #003366;
+}
+
+body {
+    margin: 0;
+    padding-top: 100px; /* Space for fixed navbar */
+    font-family: 'Outfit', sans-serif;
+    background: var(--gray-bg);
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    background: var(--lic-blue);
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.logo { color: white; font-weight: bold; font-size: 1.4rem; }
+.logo span { color: var(--lic-yellow); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px; /* Keeps links visible in Tamil */
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+#lang-selector {
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+/* HOME HERO - CENTERED SLOGANS */
+.home-hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 82, 155, 0.8), rgba(0, 0, 0, 0.7)), url('images/home-bg.jpg') no-repeat center center/cover;
+    color: white;
+    margin-top: -20px;
+}
+
+.slogan { font-size: 3.5rem; font-weight: 700; margin: 0; }
+.sub-slogan { font-size: 1.2rem; margin: 20px 0 30px 0; opacity: 0.9; }
+
+/* BENEFITS BOXES */
+.home-benefits { padding: 60px 5%; text-align: center; }
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.benefit-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 6px solid var(--lic-blue);
+    transition: 0.3s;
+}
+
+.card-secure { border-top-color: var(--security-gold); background: #fffdf2; }
+.card-secure h3 { color: #856404; }
+
+.card-prosperity { border-top-color: var(--prosperity-navy); background: #f0f7ff; }
+.card-prosperity h3 { color: var(--prosperity-navy); }
+
+/* ABOUT CARD */
+.about-container { display: flex; justify-content: center; padding: 40px 20px; }
+.agent-profile-card {
+    background: white; width: 100%; max-width: 500px;
+    border-radius: 20px; padding: 40px; text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-top: 8px solid var(--lic-blue);
+}
+
+.logo-circle {
+    width: 100px; height: 100px; background: white;
+    margin: -90px auto 20px auto; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); border: 4px solid var(--lic-blue); overflow: hidden;
+}
+
+.logo-circle img { width: 80%; height: auto; }
+
+/* BUTTONS */
+.action-btn, .contact-btn, .explore-btn {
+    background: var(--lic-blue); color: white; border: none;
+    padding: 15px 40px; border-radius: 50px; font-weight: bold;
+    cursor: pointer; transition: 0.3s; text-decoration: none; display: inline-block;
+}
+
+.action-btn:hover, .contact-btn:hover { background: #003d73; transform: translateY(-3px); }
+
+.footer { text-align: center; margin-top: 40px; color: #888; font-size: 0.8rem; padding: 20px; }
+/* --- MODERN CONTACT LAYOUT --- */
+.contact-wrapper {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.contact-container-modern {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.info-side {
+    flex: 1;
+    background: var(--lic-blue);
+    color: white;
+    padding: 50px;
+    min-width: 300px;
+}
+
+.info-side h1 { margin-bottom: 10px; font-size: 2.2rem; }
+
+.contact-list { margin-top: 40px; }
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-box .icon {
+    background: rgba(255,255,255,0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+.contact-box h4 { margin: 0; opacity: 0.7; font-size: 0.9rem; text-transform: uppercase; }
+.contact-box a, .contact-box p { color: white; text-decoration: none; font-size: 1.1rem; margin: 0; }
+
+.action-side {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 300px;
+}
+
+.whatsapp-card-btn {
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.whatsapp-card-btn:hover { transform: scale(1.05); }
+
+.timing-note { margin-top: 30px; color: #888; font-size: 0.9rem; font-style: italic; }
+* Policy Grid Styling */
+.policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.policy-card-rect {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-header {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Category Colors */
+.term-bg { background: #d32f2f; }      /* Red */
+.whole-bg { background: #2e7d32; }     /* Green */
+.endowment-bg { background: #f57c00; } /* Orange */
+.children-bg { background: #7b1fa2; } /* Purple */
+.pension-bg { background: #00529b; }  /* LIC Blue */
+
+.category-header h3 { margin: 0; font-size: 1.3rem; letter-spacing: 0.5px; }
+
+.plan-links {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.plan-item {
+    text-decoration: none;
+    color: #333;
+    background: #f9f9f9;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-left: 4px solid transparent;
+    transition: 0.3s;
+}
+
+.plan-item:hover {
+    background: #fff;
+    border-left-color: var(--lic-blue);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateX(5px);
+    color: var(--lic-blue);
+}
+.stylish-yellow-btn {
+    background: linear-gradient(135deg, #ffcc00, #ffaa00);
+    color: #003366; 
+    /* Reduced padding for smaller size */
+    padding: 10px 20px; 
+    /* Slightly smaller font */
+    font-size: 0.9rem; 
+    font-weight: 700;
+    border: none;
+    border-radius: 25px; /* Adjusting radius to match small size */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 204, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.stylish-yellow-btn:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+}
+.stylish-yellow-btn:active {
+    transform: translateY(1px); /* Sinks slightly when clicked */
+}
+.stylish-yellow-btn {
+    background: linear-gradient(135deg, #ffcc00, #ffaa00);
+    color: #003366; 
+    /* Reduced padding for smaller size */
+    padding: 10px 20px; 
+    /* Slightly smaller font */
+    font-size: 0.9rem; 
+    font-weight: 700;
+    border: none;
+    border-radius: 25px; /* Adjusting radius to match small size */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 204, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.stylish-yellow-btn:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+}
+* Apply Professional Font */
+body {
+    font-family: 'Inter', 'Outfit', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+.contact-container-modern {
+    display: flex;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.info-side {
+    padding: 60px;
+    background: #003366; /* LIC Blue */
+    color: white;
+    flex: 1;
+}
+
+.info-side h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.contact-box h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.contact-box a, .contact-box p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffcc00; /* Stylish Yellow */
+    text-decoration: none;
+}
+
+.action-side {
+    padding: 60px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+}
+
+/* Stylish WhatsApp Button */
+.whatsapp-card-btn {
+    background: #25d366;
+    color: white;
+    padding: 18px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-card-btn:hover {
+    transform: translateY(-3px);
+    background: #1eb954;
+}* Apply Professional Font */
+body {
+    font-family: 'Inter', 'Outfit', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+.contact-container-modern {
+    display: flex;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.info-side {
+    padding: 60px;
+    background: #003366; /* LIC Blue */
+    color: white;
+    flex: 1;
+}
+
+.info-side h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.contact-box h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.contact-box a, .contact-box p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffcc00; /* Stylish Yellow */
+    text-decoration: none;
+}
+
+.action-side {
+    padding: 60px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+}
+
+/* Stylish WhatsApp Button */
+.whatsapp-card-btn {
+    background: #25d366;
+    color: white;
+    padding: 18px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-card-btn:hover {
+    transform: translateY(-3px);
+    background: #1eb954;
+}* Apply Professional Font */
+body {
+    font-family: 'Inter', 'Outfit', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+.contact-container-modern {
+    display: flex;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.info-side {
+    padding: 60px;
+    background: #003366; /* LIC Blue */
+    color: white;
+    flex: 1;
+}
+
+.info-side h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.contact-box h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.contact-box a, .contact-box p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffcc00; /* Stylish Yellow */
+    text-decoration: none;
+}
+
+.action-side {
+    padding: 60px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+}
+
+/* Stylish WhatsApp Button */
+.whatsapp-card-btn {
+    background: #25d366;
+    color: white;
+    padding: 18px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-card-btn:hover {
+    transform: translateY(-3px);
+    background: #1eb954;
+}* Apply Professional Font */
+body {
+    font-family: 'Inter', 'Outfit', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+.contact-container-modern {
+    display: flex;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.info-side {
+    padding: 60px;
+    background: #003366; /* LIC Blue */
+    color: white;
+    flex: 1;
+}
+
+.info-side h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.contact-box h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.contact-box a, .contact-box p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffcc00; /* Stylish Yellow */
+    text-decoration: none;
+}
+
+.action-side {
+    padding: 60px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+}
+
+/* Stylish WhatsApp Button */
+.whatsapp-card-btn {
+    background: #25d366;
+    color: white;
+    padding: 18px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-card-btn:hover {
+    transform: translateY(-3px);
+    background: #1eb954;
+}* Apply Professional Font */
+body {
+    font-family: 'Inter', 'Outfit', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+.contact-container-modern {
+    display: flex;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.info-side {
+    padding: 60px;
+    background: #003366; /* LIC Blue */
+    color: white;
+    flex: 1;
+}
+
+.info-side h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.contact-box h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.contact-box a, .contact-box p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffcc00; /* Stylish Yellow */
+    text-decoration: none;
+}
+
+.action-side {
+    padding: 60px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+}
+
+/* Stylish WhatsApp Button */
+.whatsapp-card-btn {
+    background: #25d366;
+    color: white;
+    padding: 18px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-card-btn:hover {
+    transform: translateY(-3px);
+    background: #1eb954;
+}* Apply Professional Font */
+body {
+    font-family: 'Inter', 'Outfit', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+.contact-container-modern {
+    display: flex;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.info-side {
+    padding: 60px;
+    background: #003366; /* LIC Blue */
+    color: white;
+    flex: 1;
+}
+
+.info-side h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.contact-box h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.contact-box a, .contact-box p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffcc00; /* Stylish Yellow */
+    text-decoration: none;
+}
+
+.action-side {
+    padding: 60px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+}
+
+/* Stylish WhatsApp Button */
+.whatsapp-card-btn {
+    background: #25d366;
+    color: white;
+    padding: 18px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-card-btn:hover {
+    transform: translateY(-3px);
+    background: #1eb954;
+}
+.small-yellow-btn {
+    background: linear-gradient(135deg, #ffcc00, #ffaa00);
+    color: #003366;           /* Professional Navy Blue text */
+    padding: 6px 16px;        /* Very compact size */
+    font-size: 0.8rem;        /* Small professional text */
+    font-weight: 700;
+    border: none;
+    border-radius: 20px;      /* Clean rounded edges */
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255, 204, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 0.5px;
+}
+
+.small-yellow-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.4);
+    background: linear-gradient(135deg, #ffaa00, #ffcc00);
+}
+
+.small-yellow-btn:active {
+    transform: translateY(0.5px);
+}

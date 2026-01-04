@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About S. Sundari</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">LIC <span>Insurance</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" id="nav-home">Home</a></li>
+            <li><a href="about.html" class="active" id="nav-about">About</a></li>
+            <li><a href="policy.html" id="nav-policy">Policy</a></li>
+            <li><a href="contact.html" id="nav-contact">Contact</a></li>
+            <li>
+                <select id="lang-selector" onchange="changeLanguage()">
+                    <option value="en">English</option>
+                    <option value="ta">தமிழ்</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="about-container">
+        <div class="agent-profile-card">
+            <div class="logo-circle">
+                <img src="Images/image.jpg12.jpg" alt="LIC Logo">
+            </div>
+
+            <div class="agent-header">
+                <h1 id="agent-name">S. Sundari</h1>
+                <p class="authorized-badge" id="agent-title">Authorized LIC Agent, Tindivanam</p>
+            </div>
+
+            <hr class="divider">
+
+            <div class="agent-bio">
+                <p class="italic-quote" id="agent-quote">"Authorized LIC Agent proudly serving the people of Tindivanam with trusted life insurance guidance."</p>
+                
+                <div class="points-grid">
+                    <div class="point"><span>✔</span> <span id="p1">Licensed & Professional</span></div>
+                    <div class="point"><span>✔</span> <span id="p2">Personalized Advice</span></div>
+                    <div class="point"><span>✔</span> <span id="p3">Retirement Solutions</span></div>
+                    <div class="point"><span>✔</span> <span id="p4">Easy Consultation</span></div>
+                </div>
+            </div>
+
+            <button class="contact-btn" id="contact-btn-text" onclick="location.href='contact.html'">Inquire for Details</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p id="footer-text">© 2026 LIC Agent – Profile of S. Sundari, Tindivanam</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

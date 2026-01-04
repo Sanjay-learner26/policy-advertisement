@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIC Plan Categories | S. Sundari</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">LIC <span>Insurance</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" id="nav-home">Home</a></li>
+            <li><a href="about.html" id="nav-about">About</a></li>
+            <li><a href="policy.html" class="active" id="nav-policy">Policy</a></li>
+            <li><a href="contact.html" id="nav-contact">Contact</a></li>
+            <li>
+                <select id="lang-selector" onchange="changeLanguage()">
+                    <option value="en">English</option>
+                    <option value="ta">தமிழ்</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title" id="policy-heading">Explore LIC Plan Categories</h1>
+        
+        <div class="policy-grid">
+            
+            <div class="policy-card-rect">
+                <div class="category-header term-bg">
+                    <h3 id="cat1">Pure Term Assurance</h3>
+                </div>
+               <div class="plan-links">
+    <a href="bimakavach.html" class="plan-item" id="plan1">1. Bima Kavach (Plan 887)</a>
+<a href="yuvatermplan.html" class="plan-item" id="plan2">2. New Yuva Term Plan</a>
+<a href="jeevanamar.html" class="plan-item" id="plan3">3. Jeevan Amar</a>
+</div>
+            </div>
+
+            <div class="policy-card-rect">
+                <div class="category-header whole-bg">
+                    <h3 id="cat2">Whole Life Plans</h3>
+                </div>
+                <div class="plan-links">
+    <a href="jeevanumang.html" class="plan-item" id="plan4">1. Jeevan Umang</a>
+<a href="jeevanutsav.html" class="plan-item" id="plan5">2. LIC Jeevan Utsav</a>
+</div>
+             
+            </div>
+
+            <div class="policy-card-rect">
+                <div class="category-header endowment-bg">
+                    <h3 id="cat3">Endowment Plans</h3>
+                </div>
+                <div class="plan-links">
+    <a href="licjeevananand.html" class="plan-item" id="plan6">1. New Jeevan Anand</a>
+<a href="bimalakshmi.html" class="plan-item" id="plan7">2. Bima Lakshmi (Plan 881)</a>
+            </div>
+
+            <div class="policy-card-rect">
+                <div class="category-header children-bg">
+                    <h3 id="cat4">Children's Future</h3>
+                </div>
+                <div class="plan-links">
+    <a href="licjeevantarun734.html" class="plan-item" id="plan8">1. Jeevan Tarun Plan</a>
+<a href="childrenmoneybackplan.html" class="plan-item" id="plan9">2. New Child Money Back</a>
+</div>
+            </div>
+
+            <div class="policy-card-rect">
+                <div class="category-header pension-bg">
+                    <h3 id="cat5">Pension Plans</h3>
+                </div>
+               <div class="plan-links">
+    <a href="smartpenstionplan.html" class="plan-item" id="plan10">1. Smart Pension Plan</a>
+<a href="newjeevanshantiplan.html" class="plan-item" id="plan11">2. New Jeevan Shanti (758)</a>
+            </div>
+
+        </div>
+
+        <button onclick="window.location.href='index.html'" class="back-btn" id="back-home">← Back to Home</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
